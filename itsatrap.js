@@ -62,9 +62,8 @@ app.get('/', function (req, res) {
 function report (name, message) {
   var len = sentences.length - 1,
       index = Math.floor(Math.random()*len),
-      sentence = sentences[index];
-
-  utterance = util.format(sentence, name) + " commit message : " + message;
+      sentence = sentences[index],
+      utterance = util.format(sentence, name) + " commit message : " + message;
 
   console.log(utterance);
 
