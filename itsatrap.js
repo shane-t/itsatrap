@@ -61,10 +61,11 @@ app.get('/', function (req, res) {
 
 function report (name, message) {
   var len = sentences.length - 1,
-      index = Math.floor(Math.random()*len),
-      sentence = sentences[index],
-      utterance = util.format(sentence, name) + " commit message : " + message;
+//      index = Math.floor(Math.random()*len),
+//      sentence = sentences[index],
+//      utterance = util.format(sentence, name) + " commit message : " + message;
 
+  utterance = "push by " + name + ". " + message;
   console.log(utterance);
 
   say.speak('voice_default', utterance);
